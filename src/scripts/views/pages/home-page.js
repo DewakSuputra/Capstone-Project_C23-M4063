@@ -4,7 +4,7 @@ const HomePage = {
        <div class="headercont">
     <div class="header-home">
        
-        <p>Ayo olahraga sekarang tidak perlu bingung lagi cari lapangan badminton yang nyaman, dekat dan tentunya bisa booking online juga nih.</p>
+        
     </div>
 
 </div>
@@ -47,9 +47,11 @@ const HomePage = {
         <div class="step-description">Hubungi kami melalui WhatsApp untuk mengkonfirmasi pemesanan.</div>
     </div>
 </div>
-
+<div class="popular-title">
+        <h3>Lapangan Populer</h3>
+    </div>
 <div class="popular-grounds">
-    <h3>Lapangan Populer</h3>
+    
     <div class="ground-box">
         <div class="ground-image">
             <img src="lapangan1.jpg" alt="Lapangan 1">
@@ -68,6 +70,8 @@ const HomePage = {
             <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
         </div>
     </div>
+</div>
+
     <!-- Tambahkan kotak-kotak lainnya sesuai dengan jumlah lapangan populer -->
 </div>
 

@@ -48,6 +48,7 @@ footer {
     text-align: center;
     background-color: var(--main-color);
     padding: 30px 0;
+    color: white;
 }
 
 
@@ -82,7 +83,7 @@ footer {
     gap: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    background-image: url(/src/public/img/hero-header.jpg);
+    background-image: url(/src/public/img/hero-header.png);
     background-size: cover;
     background-position: center;
 }
@@ -129,6 +130,17 @@ footer {
     flex: 0 0 50%;
     padding: 40px;
     box-sizing: border-box;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 .read-more-button {
@@ -192,15 +204,23 @@ footer {
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     gap: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
+.popular-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 .ground-box {
-    display: inline-block;
-    width: 200px;
+    margin-top: 0;
+    flex: 0 0 200px;
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -228,4 +248,80 @@ footer {
 
 header nav a {
     color: white;
+}
+
+.form-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #21209C;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list-ground {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ground-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.ground-image img {
+    width: 150px;
+    height: auto;
+}
+
+.ground-info h4 {
+    margin-bottom: 10px;
+}
+
+.ground-info p {
+    margin-bottom: 10px;
+}
+
+.jadwal-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
