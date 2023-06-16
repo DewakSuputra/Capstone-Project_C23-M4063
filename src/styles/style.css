@@ -430,7 +430,7 @@ header nav a {
   .lapangan-nama {
     font-weight: bold;
     font-size: 40px;
-    teks-align: left;
+    text-align: left;
   }
   .lapangan-info {
     text-align: left;
@@ -439,7 +439,7 @@ header nav a {
 
   .lapangan-deskripsi {
     margin-top: 10px;
-    teks-align: right;
+    text-align: right;
     
     height: 255px;
     left: 59px;
