@@ -1,7 +1,7 @@
 const HomePage = {
     async render() {
         return `
-       <div class="headercont">
+    <div class="headercont">
     <div class="header-home">
        
         
@@ -49,7 +49,7 @@ const HomePage = {
 </div>
 <div class="popular-title">
         <h3>Lapangan Populer</h3>
-    </div>
+</div>
 <div class="popular-grounds">
     
     <div class="ground-box">
@@ -70,6 +70,25 @@ const HomePage = {
             <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
         </div>
     </div>
+    <div class="ground-box">
+        <div class="ground-image">
+            <img src="lapangan2.jpg" alt="Lapangan 2">
+        </div>
+        <div class="ground-info">
+            <h4>Nama Lapangan 2</h4>
+            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
+        </div>
+    </div>
+    <div class="ground-box">
+        <div class="ground-image">
+            <img src="lapangan2.jpg" alt="Lapangan 2">
+        </div>
+        <div class="ground-info">
+            <h4>Nama Lapangan 2</h4>
+            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
+        </div>
+</div>
+    
 </div>
 
     <!-- Tambahkan kotak-kotak lainnya sesuai dengan jumlah lapangan populer -->
