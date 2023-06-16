@@ -58,7 +58,7 @@ const HomePage = {
         </div>
         <div class="ground-info">
             <h4>Nama Lapangan 1</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
+            <a href="#/detail-page" class="detail-button">Detail Lapangan</a>
         </div>
     </div>
     <div class="ground-box">
@@ -67,7 +67,7 @@ const HomePage = {
         </div>
         <div class="ground-info">
             <h4>Nama Lapangan 2</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
+            <a href="#/detail-page" class="detail-button">Detail Lapangan</a>
         </div>
     </div>
     <div class="ground-box">
@@ -76,7 +76,7 @@ const HomePage = {
         </div>
         <div class="ground-info">
             <h4>Nama Lapangan 3</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
+            <a href="#/detail-page" class="detail-button">Detail Lapangan</a>
         </div>
     </div>
     <div class="ground-box">
@@ -85,7 +85,7 @@ const HomePage = {
         </div>
         <div class="ground-info">
             <h4>Nama Lapangan 4</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
+            <a href="#/detail-page" class="detail-button">Detail Lapangan</a>
         </div>
 </div>
     
