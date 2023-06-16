@@ -54,7 +54,7 @@ const HomePage = {
     
     <div class="ground-box">
         <div class="ground-image">
-            <img src="lapangan1.jpg" alt="Lapangan 1">
+            <img src="lapangan1.png" alt="Lapangan 1">
         </div>
         <div class="ground-info">
             <h4>Nama Lapangan 1</h4>
@@ -63,7 +63,7 @@ const HomePage = {
     </div>
     <div class="ground-box">
         <div class="ground-image">
-            <img src="lapangan2.jpg" alt="Lapangan 2">
+            <img src="lapangan1.png" alt="Lapangan 2">
         </div>
         <div class="ground-info">
             <h4>Nama Lapangan 2</h4>
@@ -72,19 +72,19 @@ const HomePage = {
     </div>
     <div class="ground-box">
         <div class="ground-image">
-            <img src="lapangan2.jpg" alt="Lapangan 2">
+            <img src="lapangan1.png" alt="Lapangan 2">
         </div>
         <div class="ground-info">
-            <h4>Nama Lapangan 2</h4>
+            <h4>Nama Lapangan 3</h4>
             <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
         </div>
     </div>
     <div class="ground-box">
         <div class="ground-image">
-            <img src="lapangan2.jpg" alt="Lapangan 2">
+            <img src="lapangan1.png" alt="Lapangan 2">
         </div>
         <div class="ground-info">
-            <h4>Nama Lapangan 2</h4>
+            <h4>Nama Lapangan 4</h4>
             <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
         </div>
 </div>
