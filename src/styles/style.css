@@ -25,6 +25,10 @@ a {
     --secondary-color: #DB1976;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     justify-content: space-between;
