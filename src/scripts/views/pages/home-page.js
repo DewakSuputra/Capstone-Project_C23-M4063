@@ -28,11 +28,14 @@ const HomePage = {
 </div>
 
 
+
 <div class="alur-title">
-    <h3>Alur Pemesanan</h3>
-</div>     
+        <h3>Alur Pemesanan</h3>
+</div>      
 <div class="booking-flow">
-<div class="booking-step">
+
+
+    <div class="booking-step">
         <div>
             <div class="step-icon">Cari Lapangan</div>
             <img src="./img/cari_lapangan.png" alt="CaraLapangan">
@@ -55,8 +58,7 @@ const HomePage = {
 <div class="popular-title">
         <h3>Lapangan Populer</h3>
 </div>
-<div class="popular-grounds">
- <section class="list-ground">
+<section class="list-ground">
             
                     <div class="court-list">
             <div class="court-item">
@@ -83,9 +85,10 @@ const HomePage = {
                 <p class="court-description">Deskripsi lapangan bulu tangkis 4.</p>
                 <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
             </div>
+         
         </div>
-       </section>
-      <a href="#/list-ground-page" class="read-more-button">Lihat Lebih Banyak</a>
+        </section>
+        <a href="#/list-ground-page" class="read-more-button">Read More</a>
 </div>
 
 
