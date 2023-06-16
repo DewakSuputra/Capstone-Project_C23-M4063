@@ -15,7 +15,7 @@ const HomePage = {
         <div class="about-image">
             <img src="./img/aboutus.png"" alt="Gambar">
         </div>
-        <div class="about-text">
+        <div class="about-text" id="about">
             <h3>About Us</h3>
             <p>BuluBook adalah sebuah platform online yang menyediakan layanan booking lapangan bulu tangkis dengan mudah dan cepat. Dengan BuluBook, pengguna dapat mencari, membandingkan, dan memesan lapangan bulu tangkis secara online dengan beberapa klik.
                 Kami bekerja sama dengan penyedia lapangan bulu tangkis terpercaya dan menyediakan pilihan lapangan yang beragam.</p>
