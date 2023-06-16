@@ -20,7 +20,7 @@ const HomePage = {
             <p>BuluBook adalah sebuah platform online yang menyediakan layanan booking lapangan bulu tangkis dengan mudah dan cepat. Dengan BuluBook, pengguna dapat mencari, membandingkan, dan memesan lapangan bulu tangkis secara online dengan beberapa klik.
                 Kami bekerja sama dengan penyedia lapangan bulu tangkis terpercaya dan menyediakan pilihan lapangan yang beragam.</p>
             <p>Keamanan, kualitas, dan kepuasan pelanggan menjadi prioritas utama kami. Dengan fitur ulasan dan penilaian dari pengguna lain, BuluBook membantu pengguna dalam memilih lapangan yang sesuai dengan kebutuhan dan preferensi pengguna.</p>
-        <a href="#/about-page" class="read-more-button">Read More</a>
+        <a href="#/home-page" class="read-more-button">Read More</a>
         
  </div>
     </div>
@@ -28,70 +28,64 @@ const HomePage = {
 </div>
 
 
-        
+<div class="alur-title">
+    <h3>Alur Pemesanan</h3>
+</div>     
 <div class="booking-flow">
-    <div class="booking-step">
-        <div class="step-icon">Cari Lapangan</div>
-        <div class="step-description">Pilih lokasi dan tanggal untuk mencari lapangan bulu tangkis yang tersedia.</div>
-    </div>
-    <div class="booking-step">
-        <div class="step-icon">Pilih Lapangan</div>
-        <div class="step-description">Pilih lapangan yang sesuai dengan preferensi Anda.</div>
-    </div>
-    <div class="booking-step">
-        <div class="step-icon">Buat Jadwal</div>
-        <div class="step-description">Tentukan jadwal dan durasi penyewaan lapangan.</div>
-    </div>
-    <div class="booking-step">
-        <div class="step-icon">Chat WhatsApp</div>
-        <div class="step-description">Hubungi kami melalui WhatsApp untuk mengkonfirmasi pemesanan.</div>
+<div class="booking-step">
+        <div>
+            <div class="step-icon">Cari Lapangan</div>
+            <img src="./img/cari_lapangan.png" alt="CaraLapangan">
+        </div>
+        <div>
+            <div class="step-icon">Pilih Lapangan</div>
+            <img src="./img/pilih_lapangan.png" alt="PilihLapangan">
+        </div>
+        <div>
+            <div class="step-icon">Lihat Jadwal</div>
+            <img src="./img/lihat_jadwal.png" alt="LihatJadwal">
+        </div>
+        <div>
+            <div class="step-icon">Chat WhatsApp</div>
+            <img src="./img/chat_wa.png" alt="ChatWa">
+        </div>
     </div>
 </div>
+
 <div class="popular-title">
         <h3>Lapangan Populer</h3>
 </div>
 <div class="popular-grounds">
-    
-    <div class="ground-box">
-        <div class="ground-image">
-            <img src="lapangan1.png" alt="Lapangan 1">
+ <section class="list-ground">
+            
+                    <div class="court-list">
+            <div class="court-item">
+                <img src="lapangan1.png" alt="Lapangan 1" class="court-image" />
+                <h2 class="court-name">Lapangan 1</h2>
+                <p class="court-description">Deskripsi lapangan bulu tangkis 1.</p>
+                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
+            </div>
+            <div class="court-item">
+                <img src="lapangan1.png" alt="Lapangan 2" class="court-image" />
+                <h2 class="court-name">Lapangan 2</h2>
+                <p class="court-description">Deskripsi lapangan bulu tangkis 2.</p>
+                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
+            </div>
+            <div class="court-item">
+                <img src="lapangan1.png" alt="Lapangan 3" class="court-image" />
+                <h2 class="court-name">Lapangan 3</h2>
+                <p class="court-description">Deskripsi lapangan bulu tangkis 3.</p>
+                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
+            </div>
+            <div class="court-item">
+                <img src="lapangan1.png" alt="Lapangan 4" class="court-image" />
+                <h2 class="court-name">Lapangan 4</h2>
+                <p class="court-description">Deskripsi lapangan bulu tangkis 4.</p>
+                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
+            </div>
         </div>
-        <div class="ground-info">
-            <h4>Nama Lapangan 1</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
-        </div>
-    </div>
-    <div class="ground-box">
-        <div class="ground-image">
-            <img src="lapangan1.png" alt="Lapangan 2">
-        </div>
-        <div class="ground-info">
-            <h4>Nama Lapangan 2</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
-        </div>
-    </div>
-    <div class="ground-box">
-        <div class="ground-image">
-            <img src="lapangan1.png" alt="Lapangan 2">
-        </div>
-        <div class="ground-info">
-            <h4>Nama Lapangan 3</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
-        </div>
-    </div>
-    <div class="ground-box">
-        <div class="ground-image">
-            <img src="lapangan1.png" alt="Lapangan 2">
-        </div>
-        <div class="ground-info">
-            <h4>Nama Lapangan 4</h4>
-            <a href="#/list-ground-page" class="detail-button">Detail Lapangan</a>
-        </div>
-</div>
-    
-</div>
-
-    <!-- Tambahkan kotak-kotak lainnya sesuai dengan jumlah lapangan populer -->
+       </section>
+      <a href="#/list-ground-page" class="read-more-button">Lihat Lebih Banyak</a>
 </div>
 
 
