@@ -1,6 +1,13 @@
+async function getpost() {
+  const res = await fetch('https://run.mocky.io/v3/0e3cec4f-0553-44bd-b038-86078a862af4');
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
 const HomePage = {
-    async render() {
-        return `
+  async render() {
+    return `
     <div class="headercont">
     <div class="header-home">
        
@@ -60,32 +67,8 @@ const HomePage = {
 </div>
 <section class="list-ground">
             
-                    <div class="court-list">
-            <div class="court-item">
-                <img src="lapangan1.png" alt="Lapangan 1" class="court-image" />
-                <h2 class="court-name">Lapangan 1</h2>
-                <p class="court-description">Deskripsi lapangan bulu tangkis 1.</p>
-                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
-            </div>
-            <div class="court-item">
-                <img src="lapangan1.png" alt="Lapangan 2" class="court-image" />
-                <h2 class="court-name">Lapangan 2</h2>
-                <p class="court-description">Deskripsi lapangan bulu tangkis 2.</p>
-                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
-            </div>
-            <div class="court-item">
-                <img src="lapangan1.png" alt="Lapangan 3" class="court-image" />
-                <h2 class="court-name">Lapangan 3</h2>
-                <p class="court-description">Deskripsi lapangan bulu tangkis 3.</p>
-                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
-            </div>
-            <div class="court-item">
-                <img src="lapangan1.png" alt="Lapangan 4" class="court-image" />
-                <h2 class="court-name">Lapangan 4</h2>
-                <p class="court-description">Deskripsi lapangan bulu tangkis 4.</p>
-                <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
-            </div>
-         
+        <div class="court-list">
+    
         </div>
         </section>
         <a href="#/list-ground-page" class="read-more-button">Read More</a>
@@ -94,11 +77,30 @@ const HomePage = {
 
       
     `;
-    },
+  },
 
-    async afterRender() {
-        // kode setelah render disini
-    },
+  async afterRender() {
+    const listGround = document.querySelector('.list-ground');
+
+    const data = await getpost();
+    const dataSlice = data.grounds.slice(0, 4);
+
+    dataSlice.forEach((post) => {
+      const courtList = document.createElement('div');
+      courtList.classList.add('court-list');
+      courtList.innerHTML = `
+        <img src="${post.picture}" alt="${post.id}" class="court-image" />
+        <h2 class="court-name">${post.name}</h2>
+        <p class="court-description">${post.descriptions}</p>
+        <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
+        </div>
+
+        </div>
+        `;
+
+      listGround.appendChild(courtList);
+    });
+  },
 };
 
 export default HomePage;
