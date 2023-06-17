@@ -1,69 +1,99 @@
+async function getPost() {
+  const res = await fetch('https://run.mocky.io/v3/0e3cec4f-0553-44bd-b038-86078a862af4');
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
 const DetailPage = {
-    async render() {
-        return `
-        <div class="lapangan-container">
-            <div class="lapangan-info">
-            <h2 class="lapangan-nama">Gedung Dua Rizky </h2>
-            <p class="lapangan-deskripsi">
-            Gedung Dua Rizky adalah sebuah fasilitas olahraga yang menyediakan lapangan badminton untuk para pemain dan penggemar olahraga ini. Lapangan badminton di Gedung Dua Rizky merupakan jenis lapangan indoor yang dirancang khusus untuk bermain badminton.
-            Gedung Dua Rizky juga menyediakan fasilitas pendukung yang nyaman dan lengkap, seperti :<br>
-            1. Lapangan berukuran 30 x 12 <br>
-            2. Pencahayaan yang memadai <br>
-            3. Sistem ventilasi yang baik <br>
-            4. Tempat duduk untuk penonton <br>
-            5. Toilet 
-            </p>
-            <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
-            </div>
-            <img class="lapangan-gambar" src="lapangan1.png" alt="Gambar Lapangan A">
-        </div>
+  async render() {
+    return `
+            <div class="lapangan-container"></div>
+            <section class="map top"></section>
 
-       <div class="fasilitas">
+            <button href="#" class="pesan">Pesan Sekarang</button>
+
+
+        `;
+  },
+
+  async afterRender() {
+  /* code */
+    const lapanganContainer = document.querySelector('.lapangan-container');
+
+    const data = await getPost();
+    const detail = data.grounds.slice(0, 1);
+
+    detail.forEach((post) => {
+      const lapanganInfo = document.createElement('div');
+      lapanganInfo.classList.add('lapangan-info');
+      const facilityDetails = post.facility.map((facility) => facility.name);
+      lapanganInfo.innerHTML = `
+        <h2 class="lapangan-nama">${post.name}</h2>
+                <p class="lapangan-deskripsi"> ${post.descriptions}:<br>
+                ${facilityDetails}
+                </p>
+                <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
+                </div>
+                <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
+            </div>
+        `;
+
+      const fasilitas = document.createElement('div');
+      fasilitas.classList.add('fasilitas');
+      fasilitas.innerHTML = `
         <h1>Fasilitas Lapangan Bulu Tangkis</h1>
-        <div class="gallery">
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 1">
+            <div class="gallery">
+                <div class="gallery-item">
+                <img src="${post.picture}" alt="${post.name}">
+                </div>
+                <div class="gallery-item">
+                <img src="${post.picture}" alt="${post.name}">
+                </div>
+                <div class="gallery-item">
+                <img src="${post.picture}" alt="${post.name}">
+                </div>
+                <div class="gallery-item">
+                <img src="${post.picture}" alt="${post.name}">
+                </div>
             </div>
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 2">
-            </div>
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 3">
-            </div>
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 1">
-            </div>        
+        </div>   
+        `;
+
+      const gallery = document.createElement('div');
+      gallery.classList.add('gallery');
+      gallery.innerHTML = `
+        <div class="gallery-item">
+        <img src="${post.picture}" alt="${post.name}">
         </div>
-        <div class="gallery">
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 1">
-            </div>
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 2">
-            </div>
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 3">
-            </div>
-            <div class="gallery-item">
-            <img src="lapangan1.png" alt="Gambar 1">
-            </div>
+        <div class="gallery-item">
+        <img src="${post.picture}" alt="${post.name}">
         </div>
-       </div>
+        <div class="gallery-item">
+        <img src="${post.picture}" alt="${post.name}">
+        </div>
+        <div class="gallery-item">
+        <img src="${post.picture}" alt="${post.name}">
+        </div>
+    </div>
+    
+        `;
 
-        <section class="map top">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63107.01652812419!2d115.1032686!3d-8.6736135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24738739cd719%3A0x2855ece643da18bd!2sLapangan%20Bulu%20Tangkis%20Sidharta!5e0!3m2!1sid!2sid!4v1686889624410!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+      const mapTop = document.querySelector('.map.top');
+      const map = document.createElement('iframe');
+      map.src = `${post.maps}`;
+      map.width = 600;
+      map.height = 450;
+      map.style.border = 0;
+      map.allowFullscreen = true;
+      map.loading = 'lazy';
+      map.referrerPolicy = 'no-referrer-when-downgrade';
 
-
-        <button href="#" class="pesan">Pesan Sekarang</button>
-
-
-       `;
-    },
-
-    async afterRender() {
-        // kode setelah render disini
-    },
+      lapanganContainer.appendChild(lapanganInfo);
+      lapanganContainer.appendChild(fasilitas);
+      lapanganContainer.appendChild(gallery);
+      mapTop.appendChild(map);
+    });
+  },
 };
-
 export default DetailPage;
