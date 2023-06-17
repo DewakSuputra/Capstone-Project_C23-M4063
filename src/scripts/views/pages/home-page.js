@@ -57,7 +57,7 @@ const HomePage = {
 <div class="popular-title">
         <h3>Lapangan Populer</h3>
 </div>
-<section class="list-ground">       
+<section class="list-ground" id="list-ground-page">       
   <div class="court-grid"></div>
 </section>
   <a href="#/list-ground-page" class="read-more-button">Read More</a>
