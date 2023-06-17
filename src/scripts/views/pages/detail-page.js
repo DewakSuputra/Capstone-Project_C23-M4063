@@ -47,7 +47,6 @@ const DetailPage = {
             <div class="gallery-item">
             <img src="lapangan1.png" alt="Gambar 1">
             </div>
-           
         </div>
        </div>
 

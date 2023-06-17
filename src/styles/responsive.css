@@ -1,0 +1,133 @@
+/* Untuk tampilan responsif di semua ukuran layar */
+@media screen and (max-width: 1200px) {
+    .list-ground {
+      justify-content: center ;
+    }
+    
+    .ground-box {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .court-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      padding-top: 22px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    
+    .court-item {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+    
+    .schedule-button {
+      margin-top: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .court-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .search-input {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .search-input {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  
+
+  /* Tampilan responsif di semua ukuran layar */
+@media screen and (max-width: 1200px) {
+    .lapangan-container {
+      flex-direction: column;
+    }
+    
+    .lapangan-gambar {
+      margin-right: 0;
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+    
+    .lapangan-nama {
+      font-size: 32px;
+      text-align: center;
+    }
+    
+    .lapangan-info {
+      padding-left: 0;
+      text-align: center;
+    }
+    
+    .lapangan-deskripsi {
+      text-align: center;
+      height: auto;
+      margin: 10px 0;
+    }
+    
+    .harga {
+      text-align: center;
+      margin: 10px 0;
+    }
+    
+    .gallery-item {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .pesan {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .lapangan-container {
+      padding: 20px;
+    }
+    
+    .lapangan-gambar {
+      width: 100%;
+      height: auto;
+    }
+    
+    .lapangan-nama {
+      font-size: 28px;
+    }
+    
+    .lapangan-deskripsi,
+    .harga {
+      font-size: 14px;
+    }
+    
+    .gallery-item {
+      width: 100%;
+    }
+    
+    .pesan {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .lapangan-nama {
+      font-size: 24px;
+    }
+    
+    .lapangan-deskripsi,
+    .harga {
+      font-size: 12px;
+    }
+  }
+  
