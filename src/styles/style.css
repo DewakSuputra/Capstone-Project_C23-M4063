@@ -412,6 +412,13 @@ header nav a {
     margin-bottom: 20px;
 }
 
+.court-grid {
+    display: flex;
+    padding: 20px;
+    
+}
+
+
 .court-item {
     background-color: #ffff;
     text-align: center;

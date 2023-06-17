@@ -26,17 +26,6 @@ const PemberiSewa = {
     <label for="harga">Harga/Jam</label>
     <input type="text" id="harga" name="harga">
   </div>
- <div class="form-group">
-<label for="waktuMulai">Waktu Mulai</label>
-<input type="time" id="waktuMulai" name="waktuMulai">
-</div>
-
-<div class="form-group">
-<label for="waktuSelesai">Waktu Selesai</label>
-<input type="time" id="waktuSelesai" name="waktuSelesai">
-</div>
-
-
 <div class="form-group">
 <label for="fasilitas">Fasilitas</label>
 <input type="text" id="fasilitas" name="fasilitas" placeholder="Masukkan fasilitas">

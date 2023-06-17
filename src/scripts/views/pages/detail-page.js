@@ -10,10 +10,7 @@ const DetailPage = {
     return `
             <div class="lapangan-container"></div>
             <section class="map top"></section>
-
-            <button href="#" class="pesan">Pesan Sekarang</button>
-
-
+            <button href="#" class="pesan"><a href="https://api.whatsapp.com/send?phone=6281234567890" class="whatsapp-button">Pesam Sekarang</a></button>
         `;
   },
 
@@ -30,15 +27,13 @@ const DetailPage = {
       lapanganInfo.innerHTML = `
       <div class="lapangan-container">
         <div class="lapangan-info">
-        <h2 class="lapangan-nama">${post.name}</h2>
-              <p class="lapangan-deskripsi"> ${post.descriptions}:<br>
-              ${facilityDetails}
-              </p>
-              <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
-              </div>
-              <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
-            </div>
+          <h2 class="lapangan-nama">${post.name}</h2>
+          <p class="lapangan-deskripsi"> ${post.descriptions}:<br>
+          ${facilityDetails}
+          </p>
+          <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
         </div>
+        <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
       </div>
         `;
  

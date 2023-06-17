@@ -8,15 +8,9 @@ async function getpost() {
 const HomePage = {
   async render() {
     return `
-    <div class="headercont">
-    <div class="header-home">
-       
-        
-    </div>
-
-</div>
+    <div class="headercont"></div>
+    <div class="header-home"></div>
   
-</div>
 <div class="text">
     <div class="about-container">
         <div class="about-image">
@@ -27,11 +21,9 @@ const HomePage = {
             <p>BuluBook adalah sebuah platform online yang menyediakan layanan booking lapangan bulu tangkis dengan mudah dan cepat. Dengan BuluBook, pengguna dapat mencari, membandingkan, dan memesan lapangan bulu tangkis secara online dengan beberapa klik.
                 Kami bekerja sama dengan penyedia lapangan bulu tangkis terpercaya dan menyediakan pilihan lapangan yang beragam.</p>
             <p>Keamanan, kualitas, dan kepuasan pelanggan menjadi prioritas utama kami. Dengan fitur ulasan dan penilaian dari pengguna lain, BuluBook membantu pengguna dalam memilih lapangan yang sesuai dengan kebutuhan dan preferensi pengguna.</p>
-        <a href="#/home-page" class="read-more-button">Read More</a>
-        
- </div>
+            <a href="#/home-page" class="read-more-button">Read More</a>
+        </div>
     </div>
-
 </div>
 
 
@@ -65,16 +57,11 @@ const HomePage = {
 <div class="popular-title">
         <h3>Lapangan Populer</h3>
 </div>
-<section class="list-ground">
-            
-        <div class="court-list">
-    
-        </div>
-        </section>
-        <a href="#/list-ground-page" class="read-more-button">Read More</a>
+<section class="list-ground">       
+  <div class="court-grid"></div>
+</section>
+  <a href="#/list-ground-page" class="read-more-button">Read More</a>
 </div>
-
-
       
     `;
   },
@@ -87,14 +74,14 @@ const HomePage = {
 
     dataSlice.forEach((post) => {
       const courtList = document.createElement('div');
-      courtList.classList.add('court-list');
+      courtList.classList.add('court-grid');
       courtList.innerHTML = `
-        <img src="${post.picture}" alt="${post.id}" class="court-image" />
-        <h2 class="court-name">${post.name}</h2>
-        <p class="court-description">${post.descriptions}</p>
-        <button class="schedule-button"><a href="#/detail-page" >Lihat Jadwal</a><button>
-        </div>
-
+        
+        <div class="court-item">
+          <img src="${post.picture}" alt="${post.name}" class="court-image" />
+          <h2 class="court-name">${post.name}</h2>
+          <p class="court-description">${post.descriptions}</p>
+          <button class="schedule-button"><a href="#/detail-page" >Lihat Detail</a><button>
         </div>
         `;
 
