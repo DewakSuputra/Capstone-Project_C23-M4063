@@ -18,7 +18,6 @@ const DetailPage = {
   },
 
   async afterRender() {
-  /* code */
     const lapanganContainer = document.querySelector('.lapangan-container');
 
     const data = await getPost();
@@ -29,19 +28,24 @@ const DetailPage = {
       lapanganInfo.classList.add('lapangan-info');
       const facilityDetails = post.facility.map((facility) => facility.name);
       lapanganInfo.innerHTML = `
+      <div class="lapangan-container">
+        <div class="lapangan-info">
         <h2 class="lapangan-nama">${post.name}</h2>
-                <p class="lapangan-deskripsi"> ${post.descriptions}:<br>
-                ${facilityDetails}
-                </p>
-                <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
-                </div>
-                <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
+              <p class="lapangan-deskripsi"> ${post.descriptions}:<br>
+              ${facilityDetails}
+              </p>
+              <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
+              </div>
+              <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
             </div>
+        </div>
+      </div>
         `;
-
+ 
       const fasilitas = document.createElement('div');
       fasilitas.classList.add('fasilitas');
       fasilitas.innerHTML = `
+      <div class="fasilitas">
         <h1>Fasilitas Lapangan Bulu Tangkis</h1>
             <div class="gallery">
                 <div class="gallery-item">
@@ -57,7 +61,8 @@ const DetailPage = {
                 <img src="${post.picture}" alt="${post.name}">
                 </div>
             </div>
-        </div>   
+        </div>
+      </div>     
         `;
 
       const gallery = document.createElement('div');
