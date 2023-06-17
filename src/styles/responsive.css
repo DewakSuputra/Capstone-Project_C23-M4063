@@ -1,133 +1,338 @@
 /* Untuk tampilan responsif di semua ukuran layar */
+
 @media screen and (max-width: 1200px) {
     .list-ground {
-      justify-content: center ;
+        justify-content: center;
     }
-    
     .ground-box {
-      width: 100%;
-      margin: 10px 0;
+        width: 100%;
+        margin: 10px 0;
     }
-    
     .court-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
-      padding-top: 22px;
-      margin-left: 20px;
-      margin-right: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding-top: 22px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
-    
     .court-item {
-      width: 100%;
-      height: auto;
-      padding: 10px;
+        width: 100%;
+        height: auto;
+        padding: 10px;
     }
-    
     .schedule-button {
-      margin-top: 20px;
+        margin-top: 20px;
     }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .court-list {
-      grid-template-columns: 1fr;
-    }
-    
-    .search-input {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .search-input {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-  
+}
 
-  /* Tampilan responsif di semua ukuran layar */
+@media screen and (max-width: 768px) {
+    .court-list {
+        grid-template-columns: 1fr;
+    }
+    .search-input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-input {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+
+/* Tampilan responsif di semua ukuran layar */
+
 @media screen and (max-width: 1200px) {
     .lapangan-container {
-      flex-direction: column;
+        flex-direction: column;
     }
-    
     .lapangan-gambar {
-      margin-right: 0;
-      width: 100%;
-      height: auto;
-      padding: 0;
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        padding: 0;
     }
-    
     .lapangan-nama {
-      font-size: 32px;
-      text-align: center;
+        font-size: 32px;
+        text-align: center;
     }
-    
     .lapangan-info {
-      padding-left: 0;
-      text-align: center;
+        padding-left: 0;
+        text-align: center;
     }
-    
     .lapangan-deskripsi {
-      text-align: center;
-      height: auto;
-      margin: 10px 0;
+        text-align: center;
+        height: auto;
+        margin: 10px 0;
     }
-    
     .harga {
-      text-align: center;
-      margin: 10px 0;
+        text-align: center;
+        margin: 10px 0;
     }
-    
     .gallery-item {
-      width: 100%;
-      margin: 10px 0;
+        width: 100%;
+        margin: 10px 0;
     }
-    
     .pesan {
-      margin-top: 50px;
-      margin-bottom: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
     .lapangan-container {
-      padding: 20px;
+        padding: 20px;
     }
-    
     .lapangan-gambar {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
-    
     .lapangan-nama {
-      font-size: 28px;
+        font-size: 28px;
     }
-    
     .lapangan-deskripsi,
     .harga {
-      font-size: 14px;
+        font-size: 14px;
     }
-    
     .gallery-item {
-      width: 100%;
+        width: 100%;
     }
-    
     .pesan {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     .lapangan-nama {
-      font-size: 24px;
+        font-size: 24px;
     }
-    
     .lapangan-deskripsi,
     .harga {
-      font-size: 12px;
+        font-size: 12px;
     }
-  }
-  
+}
+
+@media screen and (max-width: 1200px) {
+    header h2 {
+        font-size: 20px;
+        margin-left: 0;
+        text-align: left;
+    }
+    nav li {
+        font-size: 20px;
+    }
+    .booking-flow {
+        max-width: 100%;
+    }
+    .booking-step {
+        max-width: 1100px;
+    }
+    .booking-step img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h2 {
+        font-size: 15px;
+        margin-left: 0;
+        text-align: left;
+    }
+    nav li {
+        font-size: 15px;
+    }
+    .about-text {
+        font-size: 3vmin;
+    }
+    .header-home {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-height: 80vh;
+    }
+    .alur-title {
+        font-size: 30px;
+    }
+    .booking-flow {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        min-height: 50vh;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #E8F1FF;
+    }
+    .booking-step {
+        width: 600px;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .booking-step .step-icon {
+        margin-bottom: 10px;
+        padding: 10px;
+        margin-right: -10px;
+        margin-left: 20px;
+        font-size: 5vh;
+    }
+    .step-icon {
+        font-size: 2vh;
+    }
+    .booking-step img {
+        width: 180px;
+        height: 220px;
+    }
+    .booking-step .step-icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 664px) {
+    header h2 {
+        font-size: 12px;
+        margin-left: 0;
+        text-align: left;
+    }
+    nav li {
+        font-size: 12px;
+    }
+    .header-home {
+        min-height: 40vh;
+    }
+    .text {
+        min-height: fit-content;
+    }
+    .about-container {
+        min-height: fit-content;
+    }
+    .about-image {
+        display: none;
+    }
+    .about-text {
+        flex: 0 0 90%;
+        padding: 40px;
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
+    .about-text h3 {
+        font-size: 3vh;
+    }
+    .about-text p {
+        font-size: 2vh;
+    }
+    .read-more-button {
+        padding: 5px 15px;
+        font-size: 2vh;
+    }
+    .alur-title {
+        font-size: 3vh;
+    }
+    .booking-step {
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .booking-step .step-icon {
+        font-size: 3vh;
+    }
+    .step-icon {
+        font-size: 2vh;
+    }
+    .booking-step img {
+        min-width: 40px;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h2 {
+        font-size: 10px;
+        margin-left: 0;
+        text-align: left;
+    }
+    nav li {
+        font-size: 10px;
+    }
+    .header-home {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-height: 38vh;
+    }
+    .text {
+        min-height: fit-content;
+    }
+    .about-container {
+        min-height: fit-content;
+    }
+    .about-image {
+        display: none;
+    }
+    .about-image img {
+        display: none;
+    }
+    .about-text {
+        flex: 0 0 90%;
+        padding: 40px;
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
+    .about-text h3 {
+        font-size: 2.5vh;
+    }
+    .about-text p {
+        font-size: 2vh;
+    }
+    .read-more-button {
+        padding: 5px 10px;
+        font-size: 2vh;
+    }
+    .alur-title {
+        font-size: 20px;
+    }
+    .booking-flow {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        min-height: 50vh;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #E8F1FF;
+    }
+    .booking-step {
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .booking-step .step-icon {
+        margin-bottom: 10px;
+        padding: 10px;
+        margin-right: -10px;
+        margin-left: 20px;
+        font-size: 3vh;
+    }
+    .step-icon {
+        font-size: 1vh;
+    }
+    .booking-step img {
+        width: fit-content;
+        height: fit-content;
+    }
+    .booking-step .step-icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
