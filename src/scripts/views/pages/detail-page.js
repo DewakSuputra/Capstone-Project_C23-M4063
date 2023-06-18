@@ -8,14 +8,39 @@ async function getPost() {
 const DetailPage = {
   async render() {
     return `
-            <div class="lapangan-container"></div>
-            <section class="map top"></section>
-            <button href="#" class="pesan"><a href="https://api.whatsapp.com/send?phone=6281234567890" class="whatsapp-button">Pesan Sekarang</a></button>
-        `;
+      <div class="detail-page">
+        <div class="lapangan-container"></div>
+        <section class="top">
+        <h2 class="fasilitas">Fasilitas Lapangan Bulutangkis</h2>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img src="lapangan1.png" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="lapangan2.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="lapangan3.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="lapangan4.jpg" alt="">
+            </div>
+          </div>
+          <div class="map-container">
+            <div class="map"></div>
+          </div>
+        </section>
+        <button class="pesan">
+          <a href="https://api.whatsapp.com/send?phone=6281234567890" class="whatsapp-button">Pesan Sekarang</a>
+        </button>
+      </div>
+    `;
   },
 
   async afterRender() {
     const lapanganContainer = document.querySelector('.lapangan-container');
+    const gallery = document.querySelector('.gallery');
+    const mapContainer = document.querySelector('.map-container');
 
     const data = await getPost();
     const detail = data.grounds.slice(0, 1);
@@ -23,76 +48,41 @@ const DetailPage = {
     detail.forEach((post) => {
       const lapanganInfo = document.createElement('div');
       lapanganInfo.classList.add('lapangan-info');
-      const facilityDetails = post.facility.map((facility) => facility.name);
+      const facilityDetails = post.facility.map((facility) => facility.name).join(', ');
       lapanganInfo.innerHTML = `
-      <div class="lapangan-container">
+      <div class="coba">
         <div class="lapangan-info">
           <h2 class="lapangan-nama">${post.name}</h2>
-          <p class="lapangan-deskripsi"> ${post.descriptions}:<br>
-          ${facilityDetails}
-          </p>
-          <div class="harga"><b>Harga Hanya : 40.000/Jam</b></div>
+          <p class="lapangan-deskripsi">${post.descriptions}<br>${facilityDetails}</p>
+          <div class="harga"><b>Harga Hanya: 40.000/Jam</b></div>
         </div>
-        <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
+        <img class="lapangan-gambar" src="lapangan1.png" alt="Gambar Lapangan A">
       </div>
-        `;
-      const fasilitas = document.createElement('div');
-      fasilitas.classList.add('fasilitas');
-      fasilitas.innerHTML = `
-      <div class="fasilitas">
-        <h1>Fasilitas Lapangan Bulu Tangkis</h1>
-            <div class="gallery">
-                <div class="gallery-item">
-                <img src="${post.picture}" alt="${post.name}">
-                </div>
-                <div class="gallery-item">
-                <img src="${post.picture}" alt="${post.name}">
-                </div>
-                <div class="gallery-item">
-                <img src="${post.picture}" alt="${post.name}">
-                </div>
-                <div class="gallery-item">
-                <img src="${post.picture}" alt="${post.name}">
-                </div>
-            </div>
-        </div>
-      </div>     
-        `;
+      `;
 
-      const gallery = document.createElement('div');
-      gallery.classList.add('gallery');
-      gallery.innerHTML = `
-        <div class="gallery-item">
-        <img src="${post.picture}" alt="${post.name}">
-        </div>
-        <div class="gallery-item">
-        <img src="${post.picture}" alt="${post.name}">
-        </div>
-        <div class="gallery-item">
-        <img src="${post.picture}" alt="${post.name}">
-        </div>
-        <div class="gallery-item">
-        <img src="${post.picture}" alt="${post.name}">
-        </div>
-    </div>
-    
-        `;
-
-      const mapTop = document.querySelector('.map.top');
       const map = document.createElement('iframe');
       map.src = `${post.maps}`;
       map.width = 600;
       map.height = 450;
-      map.style.border = 0;
+      map.style.border = '0';
       map.allowFullscreen = true;
       map.loading = 'lazy';
       map.referrerPolicy = 'no-referrer-when-downgrade';
 
       lapanganContainer.appendChild(lapanganInfo);
-      lapanganContainer.appendChild(fasilitas);
-      lapanganContainer.appendChild(gallery);
-      mapTop.appendChild(map);
+      mapContainer.appendChild(map);
+
+      post.facility.forEach((facility) => {
+        const facilityImage = document.createElement('img');
+        facilityImage.src = facility.picture;
+        facilityImage.alt = facility.name;
+        const galleryItem = document.createElement('div');
+        galleryItem.classList.add('gallery-item');
+        galleryItem.appendChild(facilityImage);
+        gallery.appendChild(galleryItem);
+      });
     });
   },
 };
+
 export default DetailPage;
