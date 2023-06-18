@@ -36,7 +36,6 @@ const DetailPage = {
         <img class="lapangan-gambar" src="${post.picture}" alt="${post.name}">
       </div>
         `;
- 
       const fasilitas = document.createElement('div');
       fasilitas.classList.add('fasilitas');
       fasilitas.innerHTML = `

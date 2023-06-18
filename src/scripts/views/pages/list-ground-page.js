@@ -17,23 +17,40 @@ const ListGroundPage = {
 
   async afterRender() {
     const courtList = document.querySelector('.court-list');
+    const searchInput = document.querySelector('.search-input');
 
     const data = await getPost();
-    const lapangan = data.grounds;
-    lapangan.forEach((post) => {
-      const courtItem = document.createElement('div');
-      courtItem.classList.add('court-item');
-      courtItem.innerHTML = `
-      <div class="court-item">
-        <img src="${post.picture}" alt="${post.name}" class="court-image" />
-        <h2 class="court-name">${post.name}</h2>
-        <p class="court-description">${post.descriptions}</p>
-        <button class="schedule-button"><a href="#/detail-page" >Lihat Detail</a><button>
-      </div>
+    let lapangan = data.grounds;
+
+    const renderCourtList = () => {
+      courtList.innerHTML = '';
+
+      lapangan.forEach((post) => {
+        const courtItem = document.createElement('div');
+        courtItem.classList.add('court-item');
+        courtItem.innerHTML = `
+          <div class="court-item">
+            <img src="${post.picture}" alt="${post.name}" class="court-image" />
+            <h2 class="court-name">${post.name}</h2>
+            <p class="court-description">${post.descriptions}</p>
+            <button class="schedule-button"><a href="#/detail-page">Lihat Detail</a></button>
+          </div>
         `;
 
+        courtList.appendChild(courtItem);
+      });
+    };
 
-      courtList.appendChild(courtItem);
+    renderCourtList();
+    searchInput.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      if (searchTerm === '') {
+        lapangan = data.grounds;
+      } else {
+        lapangan = data.grounds.filter((post) => post.name.toLowerCase().includes(searchTerm));
+      }
+      renderCourtList();
     });
   },
 };
