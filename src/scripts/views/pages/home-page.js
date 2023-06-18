@@ -81,7 +81,7 @@ const HomePage = {
           <img src="${post.picture}" alt="${post.name}" class="court-image" />
           <h2 class="court-name">${post.name}</h2>
           <p class="court-description">${post.descriptions}</p>
-          <button class="schedule-button"><a href="#/detail-page" >Lihat Detail</a><button>
+          <button class="schedule-button"><a href="#/detail-page">Lihat Detail</a><button>
         </div>
         `;
 

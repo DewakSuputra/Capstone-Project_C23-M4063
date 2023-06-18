@@ -38,10 +38,16 @@ header {
     color: white;
 }
 
+.bok {
+    color: #FDB827;
+    font-family: 'Poppins', sans-serif;
+}
+
 header nav {
     display: flex;
     gap: 20px;
 }
+
 
 main {
     min-height: 100vh;

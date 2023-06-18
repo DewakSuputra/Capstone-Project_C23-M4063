@@ -10,7 +10,7 @@ const DetailPage = {
     return `
             <div class="lapangan-container"></div>
             <section class="map top"></section>
-            <button href="#" class="pesan"><a href="https://api.whatsapp.com/send?phone=6281234567890" class="whatsapp-button">Pesam Sekarang</a></button>
+            <button href="#" class="pesan"><a href="https://api.whatsapp.com/send?phone=6281234567890" class="whatsapp-button">Pesan Sekarang</a></button>
         `;
   },
 
