@@ -11,7 +11,7 @@ const DetailPage = {
       <div class="detail-page">
         <div class="lapangan-container"></div>
         <section class="top">
-        <h2 class="fasilitas">Fasilitas Lapangan Bulutangkis</h2>
+          <h2 class="fasilitas">Fasilitas Lapangan Bulutangkis</h2>
           <div class="gallery">
             <div class="gallery-item">
               <img src="lapangan1.png" alt="">
@@ -39,7 +39,6 @@ const DetailPage = {
 
   async afterRender() {
     const lapanganContainer = document.querySelector('.lapangan-container');
-    const gallery = document.querySelector('.gallery');
     const mapContainer = document.querySelector('.map-container');
 
     const data = await getPost();
@@ -50,14 +49,14 @@ const DetailPage = {
       lapanganInfo.classList.add('lapangan-info');
       const facilityDetails = post.facility.map((facility) => facility.name).join(', ');
       lapanganInfo.innerHTML = `
-      <div class="coba">
-        <div class="lapangan-info">
-          <h2 class="lapangan-nama">${post.name}</h2>
-          <p class="lapangan-deskripsi">${post.descriptions}<br>${facilityDetails}</p>
-          <div class="harga"><b>Harga Hanya: 40.000/Jam</b></div>
+        <div class="coba">
+          <div class="lapangan-info">
+            <h2 class="lapangan-nama">${post.name}</h2>
+            <p class="lapangan-deskripsi">${post.descriptions}<br>${facilityDetails}</p>
+            <div class="harga"><b>Harga Hanya: 40.000/Jam</b></div>
+          </div>
+          <img class="lapangan-gambar" src="lapangan1.png" alt="Gambar Lapangan A">
         </div>
-        <img class="lapangan-gambar" src="lapangan1.png" alt="Gambar Lapangan A">
-      </div>
       `;
 
       const map = document.createElement('iframe');
@@ -71,16 +70,6 @@ const DetailPage = {
 
       lapanganContainer.appendChild(lapanganInfo);
       mapContainer.appendChild(map);
-
-      post.facility.forEach((facility) => {
-        const facilityImage = document.createElement('img');
-        facilityImage.src = facility.picture;
-        facilityImage.alt = facility.name;
-        const galleryItem = document.createElement('div');
-        galleryItem.classList.add('gallery-item');
-        galleryItem.appendChild(facilityImage);
-        gallery.appendChild(galleryItem);
-      });
     });
   },
 };
